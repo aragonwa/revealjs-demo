@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Twitter Bootstrap Training</title>
+
+		<meta name="description" content="Twitter Bootstrap Training">
+		<meta name="author" content="Alex Aragon">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- FIRST SLATE -->
+				<section>
+					<h1>Advanced Bootstrap Training</h1>
+					<h3>September 15, 2014</h3>
+					<p>
+						<small>Presented by <a href="mailto:alex.aragon@kingcounty.gov">Alex Aragon</a></small>
+					</p>
+				</section>
+
+				<!-- REVEAL.JS INSTRUCTION -->
+				<section>
+					<h2>Slideshow Instructions</h2>
+					<ul>
+						<li>Press <strong>spacebar</strong> to advance slide.</li>
+						<li>Or click on the blue arrows in the bottom right</li>
+						<li>Pressing the <strong>Esc</strong> key shows a thumbnail view of all slides. You can navigate to a specific slide by clicking on the thumbnail.</li>
+						<li>Learn more about Reveal.js <a target="_blank" href="http://github.com/hakimel/reveal.js">here</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Class agenda</h2>
+						<ul>
+							<li class="fragment">What is Bootstrap?</li>
+							<li class="fragment">How King County uses Bootstrap</li>
+							<li class="fragment">Custom code</li>
+							<li class="fragment">Bootstrap components</li>
+							<ul>
+								<li class="fragment">Typography</li>
+								<li class="fragment">Icons</li>
+								<li class="fragment">Images</li>
+								<li class="fragment">Labels</li>
+								<li class="fragment">Thumbnails</li>
+								<li class="fragment">Calendar</li>
+								<li class="fragment">News feed</li>
+								<li class="fragment">Grid</li>
+								</ul>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Who this class for</h2>
+						<p>Developers who know HTML, CSS and JavaScript.</p>
+						<p>Content owners who want more control of their pages.</p>
+						<p>People who are about to migrate.</p>
+					</section>
+					<section>
+						<h2>Who this class is not for</h2>
+						<p>Regular content editors (minimal contact with Sitecore)</p>
+						<p>How to use Sitecore?</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>King County Styleguide</h2>
+					<p>
+						<a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/">http://edit.kingcounty.gov/help/styleguide/</a>
+					</p>
+					<ul>
+						<li>Styleguide for new templates</li>
+						<li>Standard styles</li>
+						<li>Customizations</li>
+						<li>Code snippets</li>
+						<li>Check back for regular updates</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What is Bootstrap</h2>
+					<p>
+						Go to: <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+					</p>
+					<p> Twitter Bootstrap is a collection of UI (user interface) elements, layouts and JavaScript tools that King County is using as a framework for our website.</p>
+				</section>
+
+				<section>
+					<h2>Why are we using Twitter Bootstrap</h2>
+					<ul>
+						<li><a target="_blank" href="http://getbootstrap.com/getting-started/#support">Standards compliant</a></li>
+						<li>Browser complatible, including Internet Explorer 8</li>
+						<li>Built mobile first</li>
+						<li>Large community of developers contribute to it, lots of documentation.</li>
+						<li>It's open source (Free!)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>When to use <a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a></h2>
+					<ul>
+						<li><a target="_blank" href="http://getbootstrap.com/javascript/#tooltips">Tooltips</a></li>
+						<li><a target="_blank" href="http://getbootstrap.com/javascript/#collapse">Accordians</a></li>
+						<li><a target="_blank" href="http://getbootstrap.com/components/#panels">Panels</a></li>
+						<li><a target="_blank" href="http://getbootstrap.com/css/#type">Style your text</a></li>
+						<li><a target="_blank" href="http://getbootstrap.com/">Much more</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Using Twitter Bootstrap</h2>
+						<p>TRY IT: Use TBS code to create a <a target="_blank" href="http://getbootstrap.com/components/#panels">panel with a heading.</a></p>
+						<ul>
+							<li>Log into <a target="_blank" href="http://edit.kingcounty.gov/sitecore">http://edit.kingcounty.gov/sitcore</a></li>
+							<li>Navigate to <strong>sites/help/training/2014-09-15</strong></li>
+							<li><strong>Right-click</strong> and choose duplicate</li>	
+							<li>Rename your-site to your name</li>
+							<li>Add a 2-column addon to your page</li>
+							<li>Click <strong>Edit HTML</strong> and copy the code from panels into the the editor</li>
+							<li>Save and preview your page</li>
+							<li>Extra credit: add a panel with a colored background</li>
+						</ul>
+					</section>
+					<section>	
+						<h2>Using Twitter Bootstrap</h2>
+							<p>Solution</p>
+								<pre>
+									<code data-trim contenteditable>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+									</code>
+								</pre>
+						</section>
+					</section>
+
+					<section>
+						<section>
+							<h1>Custom code</h1>
+							<p><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/custom-code.aspx">King County policy on custom code</a></p>
+							<ul>
+								<li class="fragment"><strong>Strongly urge</strong> to not use custom code</li>
+								<li class="fragment">Creates major problems with global changes and updates</li>
+								<li class="fragment">Breaks consistent look and feel</li>
+								<li class="fragment">Pages take longer to download</li>
+								<li class="fragment">Bootstrap offers hundreds of solutions</li>
+								<li class="fragment" style="color:red; font-weight:bold">If you use custom code on your page, you are responsible for it.</li>
+							</ul>
+						</section>
+						<section>
+							<h1>Custom code workflow</h1>
+							<ol>
+								<li>Check <a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/">styleguide</a></li>
+								<li>Next, check <a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
+								<li>Google your solution using "Bootstrap 3" in search query</li>
+							</ol>
+						</section>
+
+						<section>
+							<h1>Where to put custom code?</h1>
+							<ul>
+								<li>Media library</li>
+								<li>Globals section</li>
+								<li><strong>Recommended</strong> in customHead and customScript sections</li>
+									<ul>
+										<li>CustomHead for CSS</li>
+										<li>CustomScript for javascript</li>
+									</ul>
+							</ul>
+						</section>
+					</section>
+
+					<section>
+
+						<section>
+						<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/typography.aspx">Typography</a></h2>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/typography.aspx">Typography</a></h2>
+								<p>TRY IT: Create an addon and add a blockquote and anchor buttons</p>
+								<p>EXTRA CREDIT: Add a a portal list</p>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/typography.aspx">Typography</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<blockquote>To infinity and beyond</blockquote>
+<a target="_blank" href="http://www.google.com" role="button" class="btn btn-default">Link </a>
+
+
+<div class="portal-list">
+	<h2>List title</h2>
+	<ul>
+  	<li><a target="_blank" href="#">Lorem ipsum</a></li>
+  	<li><a target="_blank" href="#">Phasellus iaculis</a></li>
+  	<li><a target="_blank" href="#">Nulla volutpat</a></li>
+	</ul>
+</div>
+              	</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/icons.aspx">Icons</a></h2>
+								<p><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> Version 4.1.0</p>
+								<p>TRY IT: Insert a facebook icon to a button link</p>
+								<p>EXTRA CREDIT: Color your icons</p>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/icons.aspx">Icons</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<a target="_blank" href="http://www.google.com" role="button" class="btn btn-default">
+	<i class="fa-facebook-square"></i> Like me
+</a>
+
+              	</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/images.aspx">Images</a></h2>
+							<p>By default all images are responsive</p>
+							<p>Make images not responsive by adding class <strong>.img-non-responsive</strong></p>
+							<img src="http://lorempixel.com/250/250/animals/color/" />
+
+						</section>
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/images.aspx">Images</a></h2>
+							<p>TRY IT: Add an image that floats to right of text</p>
+							<img src="http://lorempixel.com/250/250/animals/color/" />
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/images.aspx">Images</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<img src="http://lorempixel.com/250/250/animals/color/" class="pull-right" />
+<p>Lorem ipsum dolor sit amet, consectetuer 
+	adipiscing elit. Aenean commodo ligula eget dolor.
+</p>
+              	</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/calendar.aspx">Calendar</a></h2>
+							<img src="img/calendar.jpg" />
+
+						</section>
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/calendar.aspx">Calendar</a></h2>
+							<p>TRY IT: Add a calendar to an addon</p>
+							<p>Make sure to add JavaScript snippet to customCode section</p>
+						</section>
+
+						<section>
+							<h1>King County styleguide</h1>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/calendar.aspx">Calendar</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<div id="my-cal"></div>
+<script>
+$('#my-cal').eventsCalendar({
+  calNum: '69gk-ky9a'
+});
+</script>
+								</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/news-feed.aspx">News Feed</a></h2>
+							<img src="img/news-feed.jpg" />
+
+						</section>
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/news-feed.aspx">News Feed</a></h2>
+							<p>TRY IT: Add a news feed to an addon</p>
+							<p>Make sure to add Javascript snippet to customCode section</p>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/news-feed.aspx">News Feed</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+									
+<div id="my-news"></div>
+<script>
+$('#my-news').deliciousNewsFeed({
+	title: 'My News Feed'
+});
+</script>
+								</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/thumbnails.aspx">Thumbnails</a></h2>
+							<p>TRY IT: Add a row of thumbails to an addon</p>
+							<p>EXTRA CREDIT: Add a title, text and buttons to thumbnail</p>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/thumbnails.aspx">Thumbnails</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<div class="row">
+  <div class="col-xs-6 col-md-3"><a target="_blank" href="#" class="thumbnail"><img src="http://placekitten.com/171/180"></a></div>
+  <div class="col-xs-6 col-md-3"><a target="_blank" href="#" class="thumbnail"><img src="http://placekitten.com/171/180"></a></div>
+  <div class="col-xs-6 col-md-3"><a target="_blank" href="#" class="thumbnail"><img src="http://placekitten.com/171/180"></a></div>
+  <div class="col-xs-6 col-md-3"><a target="_blank" href="#" class="thumbnail"><img src="http://placekitten.com/171/180"></a></div>
+</div>
+								</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/labels.aspx">Labels</a></h2>
+							<p>TRY IT: Add a label</p>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/labels.aspx">Labels</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<p>
+	Example heading 
+	<span class="label label-default">New</span>
+</p>
+								</code>
+							</pre>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/grid.aspx">12-column grid</a></h2>
+							<p>Twitter Bootstrap uses a 12-column grid system</p>
+							<img src="img/grid.jpg" alt="placeholder+image">
+						</section>
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/grid.aspx">12-column grid</a></h2>
+							<p>Grid automatically stacks at mobile.</p>
+							<p>Desktop view</p>
+							<img src="img/grid-lg.jpg" />
+							<p>Mobile view</p>
+							<img src="img/grid-lg-stacked.jpg" />
+
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/grid.aspx">12-column grid</a></h2>
+							<p>Use <a target="_blank" href="http://getbootstrap.com/css/#responsive-utilities">visibility classes</a> to toggle visibility of sections at certain sizes</p>
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/grid.aspx">12-column grid</a></h2>
+							<p>TRY IT: Create a div with text and hide it from mobile view.</p>
+
+						</section>
+
+						<section>
+							<h2><a target="_blank" href="http://edit.kingcounty.gov/help/styleguide/grid.aspx">12-column grid</a></h2>
+							<pre>
+								<code data-trim contenteditable>
+<div>
+	<p> Lots of text I don't want anyone using on an mobile device to see</p>
+</div>
+								</code>
+							</pre>
+						</section>
+
+					</section>
+
+					<section>
+						<h1>THE END</h1>
+						<h3>Questions?</h3>
+						<p>Email: <a target="_blank" href="mailto:webteam@kingcounty.gov">webteam@kingcounty.gov</a></p>
+					</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				slideNumber: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				 //Parallax scrolling
+				 //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				 //parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
